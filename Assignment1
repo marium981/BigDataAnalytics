@@ -1,0 +1,4 @@
+docker run -d --name=mysql.test --hostname=mysql.test -restart=always -e MYSQL_ROOT_PASSWORD='marium123' mysql
+docker exec -it mysql.test bash
+docker exec -i mysql.test mysql -uroot -pmarium123 classicmodels < mysqlsampledatabase.sql
+docker stats
